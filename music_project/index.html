@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS file -->
+        <link rel="stylesheet" href="style.css">
+        <title>Music Player</title>
+    </head>
+    <body>
+
+        <!-- Dark Mode Section + Heading -->
+        <div id="heading">
+            <h1>Music Player</h1>
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+        </div>
+
+        <!-- First Container for all song list -->
+        <div id="container">
+            <div id="all-song-div">
+                <h2>All Songs</h2>
+                <div id="Search_Song">
+                    <label for="searchSong" id="search_S">Search Song:</label>
+                    <input type="text" id="searchSong" oninput="searchSong()">
+                </div>
+
+                <label for="genreFilter" id="filter_G">Filter by Genre:</label>
+                <select id="genreFilter" onchange="showSongs()">
+                    <option value="all">All Genres</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                </select>
+                <ul id="songList"></ul>
+            </div>
+
+            <!-- Current Song render part / current song details -->
+            <div id="card-div">
+                <div></div>
+                <div id="songCard">
+                    <!-- Song details will be displayed here -->
+                </div>
+                <div>
+                    <audio src controls autoplay id="player"></audio>
+                </div>
+                <div id="button_control">
+                    <button onclick="playPrevious()">Previous</button>
+                    <button onclick="playNext()">Next</button>
+                    <button onclick="addToPlaylist()">Add to Playlist</button>
+                </div>
+            </div>
+
+            <!-- All Playlist section  -->
+            <div id="playlist-div">
+                <div id="Playlist_Search">
+                    <label for="searchPlaylist" id="search_p">Search Playlist:</label>
+                    <input type="text" id="searchPlaylist"
+                        oninput="searchPlaylist()">
+                </div>
+                <h2>All Playlist</h2>
+                <ul id="allPlaylists"></ul>
+                <button onclick="createPlaylist()" style="margin: 5px;">Create Playlist</button>
+                <br>
+                <button onclick="removePlaylist()" style="margin: 5px;">Remove Playlist</button>
+                <br>
+                <button onclick="removeFromPlaylist()" style="margin: 5px;">Remove from Playlist</button>
+            </div>
+        </div>
+
+        <!-- Js file -->
+        <script src="script.js"></script>
+    </body>
+</html>

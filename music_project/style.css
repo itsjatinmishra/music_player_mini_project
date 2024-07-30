@@ -1,0 +1,234 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:  #fff;
+    color:#333;
+}
+
+#heading {
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgba(0, 150, 136, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+/* Dark Mode */
+.dark-mode{
+    background-color: #333;
+}
+
+/* All Card */
+#all-song-div,
+#card-div,
+#playlist-div {
+    border: 2px solid rgb(128, 109, 214);
+    color: black;
+    padding: 10px;
+    width: 30%;
+    height: 30rem;
+    background-color: rgba(0, 150, 136, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: #333;
+}
+
+#all-song-div select,
+#additionalTasks input,
+#additionalTasks button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Song List  */
+#songList li,
+#allPlaylists li {
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #cac3eb;
+    transition: background-color 0.3s ease;
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#songList li:hover,
+#allPlaylists li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Song Search part */
+#searchSong{
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width:auto;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+#filter_G{
+    color: black;
+}
+
+#genreFilter{
+    border: 1px solid #fff;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Search  */
+#search_S,  #search_p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    
+}
+
+#Playlist_Search{
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+#searchPlaylist{
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: auto;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+/* song Card  */
+#songCard {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid rgba(110, 50, 228, 0.825);
+    border-radius: 15px;
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(110, 50, 228, 0.825);
+    transition: 400ms;
+    padding: 5px;
+    padding-top: 10px;
+}
+#songCard:hover{
+    filter: grayscale(0.2);
+    transform: scale(1.05);
+}
+
+/* Song card image */
+#songCard img{
+    display: block;
+    width: 300px;
+    height: 200px;
+    margin-left: 6px;
+    border-radius: 10px;
+}
+
+/* All button */
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #3e26729f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+#button_control{
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+button:hover {
+    background-color: #9a83d8;
+    filter: blur(1.5s);
+    transform: scale(1.02);
+    box-shadow: 2px 2px 1px 1px #313131;
+}
+
+/* Player */
+#player{
+    margin-left: 50px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styling for Mobile devices */
+@media only screen and (max-width: 600px) {
+
+    #container {
+        margin: 10px;
+        display: block;
+        width: 300px;
+        justify-content: center;
+    }
+
+    #heading{
+        margin: 10px;
+        display: block;
+        width: 300px;
+        justify-content: center;
+    }
+
+    #card-div{
+        margin: 0px;
+        margin-bottom: 10px;
+        display: block;
+        width: 300px;
+        justify-content: center;
+    }
+
+    #songCard img{
+        width: 180px;
+    }
+
+    #player{
+        max-width: 200px;
+    }
+
+    button{
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    body{
+        font-size: 12px;
+        max-width: 300px;
+    }
+
+    #all-song-div{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #playlist-div{
+        height: 50vh;
+        display: block;
+        width: 300px;
+        overflow-y: auto;
+    }
+
+}
